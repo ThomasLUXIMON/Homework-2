@@ -1792,6 +1792,7 @@ GameObject:
   - component: {fileID: 1308145191}
   - component: {fileID: 1308145190}
   - component: {fileID: 1308145189}
+  - component: {fileID: 1308145194}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -2435,6 +2436,21 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1308145194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308145187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc86d6bc2a2f204ea417186d9feaf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearObjects: []
+  grabbedObject: {fileID: 0}
+  action: {fileID: -5194266436686895582, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
 --- !u!1 &1374725918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,6 +3104,7 @@ GameObject:
   - component: {fileID: 2033185989}
   - component: {fileID: 2033185988}
   - component: {fileID: 2033185987}
+  - component: {fileID: 2033185992}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -3731,6 +3748,21 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!114 &2033185992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033185985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc86d6bc2a2f204ea417186d9feaf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nearObjects: []
+  grabbedObject: {fileID: 0}
+  action: {fileID: -1289947363739713011, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
