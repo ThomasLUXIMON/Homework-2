@@ -23,6 +23,10 @@ public class CustomGrab : MonoBehaviour
     // Flag to check if the grip button is being pressed
     bool grabbing = false;
 
+    // Variables to store the previous position and rotation
+    Vector3 previousPosition;
+    Quaternion previousRotation;
+
     private void Start()
     {
         // Enable the input action
@@ -49,17 +53,22 @@ public class CustomGrab : MonoBehaviour
 
             if (grabbedObject)
             {
-                // Change these to add the delta position and rotation instead
-                // Save the position and rotation at the end of Update function, so you can compare previous pos/rot to current here
-                grabbedObject.position = transform.position;
-                grabbedObject.rotation = transform.rotation;
+                // Add the delta position and rotation instead
+                Vector3 deltaPosition = transform.position - previousPosition;
+                Quaternion deltaRotation = transform.rotation * Quaternion.Inverse(previousRotation);
+
+                // Apply the delta position and rotation to the grabbed object
+                grabbedObject.position += deltaPosition;
+                grabbedObject.rotation *= deltaRotation;
             }
         }
         // If let go of button, release object
         else if (grabbedObject)
             grabbedObject = null;
 
-        // Should save the current position and rotation here
+        // Save the current position and rotation for the next frame
+        previousPosition = transform.position;
+        previousRotation = transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -81,3 +90,4 @@ public class CustomGrab : MonoBehaviour
         if (t && t.tag.ToLower() == "grabbable")
             nearObjects.Remove(t);
     }
+}
